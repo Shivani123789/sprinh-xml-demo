@@ -1,5 +1,6 @@
 package com.stackroute;
 
+import com.stackroute.Demo.BeanLifecycleDemoBean;
 import com.stackroute.domain.Actor;
 import com.stackroute.domain.Movie;
 import org.springframework.beans.factory.BeanFactory;
@@ -15,8 +16,7 @@ import org.springframework.core.io.Resource;
 
 public class Main
 {
-    public static void main( String[] args )
-    {
+    public static void main( String[] args ) throws Exception {
         ApplicationContext context=new ClassPathXmlApplicationContext("beans.xml");
         //using chile id
         // using id of Movie --movie
@@ -31,6 +31,10 @@ public class Main
         BeanFactory factory1=new XmlBeanFactory(resource1);
         Movie movie2=(Movie)factory1.getBean("movieB");
         System.out.println(movie1.getActor().getActorname()+" acted in " +movie1.getName());
+        //BeanLifecycleDemoBean cust = (BeanLifecycleDemoBean)context.getBean("beanLifecycleDemoBean");
+
+        ClassPathXmlApplicationContext cxt=(ClassPathXmlApplicationContext)context;
+        cxt.destroy();
 
        // testing beans scope
      //   ApplicationContext context1=new ClassPathXmlApplicationContext("beans.xml");
