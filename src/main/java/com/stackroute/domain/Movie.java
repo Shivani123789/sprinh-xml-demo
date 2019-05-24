@@ -10,6 +10,12 @@ public class Movie {
 // create constuctor to use constructor method
 
 
+    public Movie(Actor actor) {
+        System.out.println(actor);
+        this.actor = actor;
+    }
+
+
     public Movie(Actor actor, int id, String name) {
         this.actor = actor;
         this.id = id;
