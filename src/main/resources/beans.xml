@@ -1,0 +1,31 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+
+<beans xmlns = "http://www.springframework.org/schema/beans"
+       xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation = "http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+<!--    <bean id="movie" class="com.stackroute.domain.Movie">-->
+<!--        <property name="Actor" ref="actor"></property>-->
+<!--        <property name="id" value="2"></property>-->
+<!--        <property name="name" value="tal"></property>-->
+<!--    </bean>-->
+<!--    &lt;!&ndash;  useig beans for actor &ndash;&gt;-->
+<!--    <bean id="actor" class="com.stackroute.domain.Actor">-->
+<!--        <property name="name" value="shivani"></property>-->
+<!--        <property name="gender" value="female"></property>-->
+<!--        <property name="age" value="29"></property>-->
+<!--    </bean>-->
+
+    <bean id="movie" class="com.stackroute.domain.Movie" scope="prototype">
+        <constructor-arg name="actor" ref="actor"></constructor-arg>
+        <constructor-arg name="id" value="2"></constructor-arg>
+        <constructor-arg name="name" value="tal"></constructor-arg>
+    </bean>
+    <!--  useig beans for actor -->
+    <bean id="actor" class="com.stackroute.domain.Actor" >
+        <constructor-arg name="actorname" value="sidhharth"></constructor-arg>
+        <constructor-arg name="gender" value="female"></constructor-arg>
+        <constructor-arg name="age" value="29"></constructor-arg>
+    </bean>
+</beans>
