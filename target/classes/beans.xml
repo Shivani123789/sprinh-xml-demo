@@ -18,7 +18,7 @@
 <!--    </bean>-->
 
     <bean name="movieA, movieB" class="com.stackroute.domain.Movie" autowire="byName" >
-<!--      <constructor-arg name="actor" ref="actor"></constructor-arg>-->
+      <constructor-arg name="actor" ref="actor"></constructor-arg>
         <constructor-arg name="id" value="2"></constructor-arg>
         <constructor-arg name="name" value="tal"></constructor-arg>
     </bean>
@@ -30,4 +30,8 @@
         <constructor-arg name="age" value="29"></constructor-arg>
     </bean>
 
+    <bean id="applicationCpntextAwareDemo" class="com.stackroute.awareInterface.ApplicationContextAwareDemo"></bean>
+    <bean id="beanFactoryAwareDemo" class="com.stackroute.awareInterface.BeanFactoryAwareDemo"></bean>
+    <bean id="beanNameAwareDemo" class="com.stackroute.awareInterface.BeanNameAwareDemo"></bean>
+<bean id="aesouraceLoaderAwareDemo" class="com.stackroute.awareInterface.ResouraceLoaderAwareDemo"></bean>
 </beans>

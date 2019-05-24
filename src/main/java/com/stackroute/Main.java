@@ -17,11 +17,11 @@ public class Main
 {
     public static void main( String[] args )
     {
-//        ApplicationContext context=new ClassPathXmlApplicationContext("beans.xml");
-//        //using chile id
-//        // using id of Movie --movie
-//        Movie movie = (Movie) context.getBean("movie");
-//        System.out.println(movie.getActor().getActorname()+" acted in " +movie.getName());
+        ApplicationContext context=new ClassPathXmlApplicationContext("beans.xml");
+        //using chile id
+        // using id of Movie --movie
+        Movie movie = (Movie) context.getBean("movieA");
+        System.out.println(movie.getActor().getActorname()+" acted in " +movie.getName());
 
         Resource resource=new ClassPathResource("beans.xml");
         BeanFactory factory=new XmlBeanFactory(resource);
