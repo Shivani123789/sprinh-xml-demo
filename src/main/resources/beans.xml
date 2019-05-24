@@ -37,5 +37,7 @@
 
     <bean id="beanLifecycleDemoBean" class="com.stackroute.Demo.BeanLifecycleDemoBean">
         <property name="message" value=" we are in BeanLifecycleDemoBean class "></property>
+
     </bean>
+    <bean id="beanLifecycleDemoBean1" class="com.stackroute.Demo.BeanPostProcessorDemoBean"></bean>
 </beans>
